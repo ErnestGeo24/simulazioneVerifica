@@ -26,5 +26,10 @@ def mappa800():
 def mappa1000():
   return render_template("index7.html",dimensione = 1000)
 
+@app.route('/mappa/<width>') # L'utente richiede la pagina mappa
+def mappawidth(width):
+  return render_template("index7.html",dimensione = width)
+
+
 if __name__ == '__main__':
   app.run(host='0.0.0.0', port=3245, debug=True)
